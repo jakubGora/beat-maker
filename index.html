@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Kursik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="panel">
+      <div class="top">
+        <h1>BeatMaker</h1>
+        <button class="onOff"></button>
+      </div>
+      <div class="sequencer">
+        <div class="one-track track">
+          <div class="controls">
+            <select name="kick-select" id="kick-select">
+              <option value="./sounds/kick-808.wav">808 kick</option>
+              <option value="./sounds/kick-acoustic01.wav">Ac kick</option>
+              <option value="./sounds/kick-acoustic02.wav">Ac kick</option>
+              <option value="./sounds/kick-big.wav">Big kick</option>
+            </select>
+            <button data-track="0" class="mute kick-volume"></button>
+          </div>
+          <div class="kick pads">
+            <div class="pad kick-pad b0"></div>
+            <div class="pad kick-pad b1"></div>
+            <div class="pad kick-pad b2"></div>
+            <div class="pad kick-pad b3"></div>
+            <div class="pad kick-pad b4"></div>
+            <div class="pad kick-pad b5"></div>
+            <div class="pad kick-pad b6"></div>
+            <div class="pad kick-pad b7"></div>
+          </div>
+        </div>
+
+        <div class="two-track track">
+          <div class="controls">
+            <select name="cowbel-select" id="cowbel-select">
+              <option value="./sounds/cowbell-808.wav">808 cowbell</option>
+            </select>
+            <button data-track="0" class="mute kick-volume"></button>
+          </div>
+          <div class="cowbel pads">
+            <div class="pad cowbel-pad b0"></div>
+            <div class="pad cowbel-pad b1"></div>
+            <div class="pad cowbel-pad b2"></div>
+            <div class="pad cowbel-pad b3"></div>
+            <div class="pad cowbel-pad b4"></div>
+            <div class="pad cowbel-pad b5"></div>
+            <div class="pad cowbel-pad b6"></div>
+            <div class="pad cowbel-pad b7"></div>
+          </div>
+        </div>
+
+        <div class="three-track track">
+          <div class="controls">
+            <select name="crash-select" id="crash-select">
+              <option value="./sounds/crash-808.wav">808 crash</option>
+              <option value="./sounds/crash-acoustic.wav">Ac crash</option>
+              <option value="./sounds/crash-noise.wav">Crash noise</option>
+              <option value="./sounds/crash-tape.wav">Tap crash</option>
+            </select>
+            <button data-track="0" class="mute crash-volume"></button>
+          </div>
+          <div class="crash pads">
+            <div class="pad crash-pad b0"></div>
+            <div class="pad crash-pad b1"></div>
+            <div class="pad crash-pad b2"></div>
+            <div class="pad crash-pad b3"></div>
+            <div class="pad crash-pad b4"></div>
+            <div class="pad crash-pad b5"></div>
+            <div class="pad crash-pad b6"></div>
+            <div class="pad crash-pad b7"></div>
+          </div>
+        </div>
+
+        <div class="four-track track">
+          <div class="controls">
+            <select name="snare-select" id="snare-select">
+              <option value="./sounds/snare-808.wav">808 snare</option>
+              <option value="./sounds/snare-acoustic01.wav">Ac snare</option>
+              <option value="./sounds/snare-acoustic02.wav">Ac2 snare</option>
+              <option value="./sounds/snare-analog.wav">Snare analog</option>
+            </select>
+            <button data-track="0" class="mute snare-volume"></button>
+          </div>
+          <div class="snare pads">
+            <div class="pad snare-pad b0"></div>
+            <div class="pad snare-pad b1"></div>
+            <div class="pad snare-pad b2"></div>
+            <div class="pad snare-pad b3"></div>
+            <div class="pad snare-pad b4"></div>
+            <div class="pad snare-pad b5"></div>
+            <div class="pad snare-pad b6"></div>
+            <div class="pad snare-pad b7"></div>
+          </div>
+        </div>
+        <div class="playBpm">
+          <input type="number" name="bpm" placeholder="Bpm" id="bpm-input" />
+          <button class="play" onclick="play()">Play</button>
+        </div>
+
+        <audio class="kick-sound" src="./sounds/kick-808.wav"></audio>
+        <audio class="cowbel-sound" src="./sounds/cowbell-808.wav"></audio>
+        <audio class="crash-sound" src="./sounds/crash-tape.wav"></audio>
+        <audio class="snare-sound" src="./sounds/snare-808.wav"></audio>
+      </div>
+
+      <div class="params">
+        <div class="vol bar">
+          <img src="/img/barSiatka.png" />
+        </div>
+        <div class="bpm bar">
+          <img src="/img/barSiatka.png" />
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

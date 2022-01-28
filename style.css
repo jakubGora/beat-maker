@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 2vmax;
+  background-color: rgb(41, 41, 41);
+}
+
+.panel {
+  background-color: #1b1b1b;
+  box-shadow: 0 0 1rem black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 90vh;
+  width: 90vw;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  width: 90vw;
+  padding: 2rem;
+  height: 8rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  width: 65vw;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+}
+
+div.track:nth-of-type(2n) {
+  background-color: rgb(36, 36, 36);
+  border-radius: 1rem;
+}
+
+.params {
+  display: flex;
+  flex-direction: row;
+  width: 25vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bar {
+  background-color: rgb(83, 83, 83);
+  height: 60vh;
+  width: 3rem;
+  background: rgb(0, 233, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 233, 255, 1) 0%,
+    rgba(0, 255, 21, 1) 0%,
+    rgba(255, 244, 0, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  border-radius: 1rem;
+}
+.bar img {
+  height: 100%;
+  width: 100%;
+}
+
+svg {
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 5rem;
+  color: rgb(238, 238, 238);
+  text-shadow: 0 0 0.5rem red;
+  align-self: flex-start;
+  margin-left: 2rem;
+
+  font-style: Semi-bold 600;
+}
+h2 {
+  font-size: 2rem;
+  color: rgb(141, 141, 141);
+  text-shadow: 0.2rem 0.2rem black;
+}
+
+.mute {
+  background-image: url("img/mute-speaker.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 5rem;
+  box-shadow: 0 0 1rem black;
+}
+
+button,
+select,
+input {
+  border: none;
+  background-color: rgb(226, 226, 226);
+  font-size: large;
+  height: 5rem;
+  width: 10rem;
+  padding: 1rem;
+
+  transition: all 0.5s ease;
+}
+select,
+input {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: rgb(56, 56, 56);
+  color: aliceblue;
+}
+button {
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: rgb(126, 126, 126);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(116, 116, 116);
+  color: aliceblue;
+}
+
+.top button {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  box-shadow: 0 0 1rem black;
+  background-color: rgb(48, 48, 48);
+  background-image: url("img/on-off-button.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.playBpm {
+  margin: 1rem;
+}
+.track {
+  width: 90%;
+  padding: 0.5rem;
+  height: 9rem;
+  display: flex;
+  transition: ease 0.4s all;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
+}
+.pads {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 100%;
+}
+.pad {
+  transition: all 0.2s ease;
+  width: 5rem;
+  height: 5rem;
+
+  opacity: 0.5;
+  background-color: white;
+  box-shadow: 0 0 1rem black;
+  border-radius: 0.3rem;
+}
+
+.pad:hover {
+  cursor: pointer;
+}
+
+.kick-pad.checked {
+  background-color: rgb(0, 255, 255);
+  box-shadow: 0 0 1rem rgb(0, 204, 204);
+}
+.crash-pad.checked {
+  background-color: rgb(255, 15, 143);
+  box-shadow: 0 0 1rem rgb(216, 15, 122);
+}
+
+.snare-pad.checked {
+  background-color: rgb(170, 255, 43);
+  box-shadow: 0 0 1rem rgb(145, 216, 38);
+}
+.cowbel-pad.checked {
+  background-color: rgb(153, 43, 255);
+  box-shadow: 0 0 1rem rgb(153, 43, 255);
+}
+
+.onOff.checked {
+  background-color: rgb(240, 33, 33);
+  box-shadow: 0 0 1rem rgb(216, 38, 38);
+}
+
+.checked {
+  opacity: 1;
+}
